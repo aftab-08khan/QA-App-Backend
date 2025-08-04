@@ -21,10 +21,12 @@ app = FastAPI(
     description="Upload documents and ask questions about their content",
     version="2.0.0"
 )
+import os
+port = int(os.environ.get("PORT", 10000))
+
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=10000, reload=True)
-
+    uvicorn.run("main:app", host="0.0.0.0", port=port)
 # Thread pool for CPU-intensive tasks
 executor = ThreadPoolExecutor(max_workers=2)
 
