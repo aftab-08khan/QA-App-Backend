@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+transformers
+torch
+langchain
+langchain-community
+sentence-transformers
+pypdf
+python-docx
